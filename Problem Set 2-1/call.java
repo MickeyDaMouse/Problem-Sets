@@ -1,5 +1,8 @@
-import java.text.Normalizer;
+//Mickey Zhao
+//Sept. 29th 2022
+//Problem Set 2-1
 
+//using the formulas
 public class call {
     public static void main(String[] args) {
 
