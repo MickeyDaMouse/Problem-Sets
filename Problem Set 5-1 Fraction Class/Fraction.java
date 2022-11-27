@@ -14,8 +14,8 @@ public class Fraction {
      */
 
     public Fraction() {
-        numerator = 1;
-        denominator = 1;
+        numerator = (int) (Math.random()*9 + 1);
+        denominator = (int) (Math.random() * 9 + 1);
         reduce();
     }
 
@@ -66,6 +66,18 @@ public class Fraction {
 
     public int getDen() {
         return denominator;
+    }
+
+    /**
+     * return true if fraction f is equal to this fraction.
+     * It does not take into account if two fractions are equal in value, just if the numerators and denominators are the same.
+     * @param f - the fraction to compare with
+     * @return - a boolean value that represents if f is equal to this fraction or not
+     */
+    public boolean equals(Fraction f)
+    {
+        if(numerator == f.numerator && denominator == f.denominator) return true;
+        return false;
     }
 
     public double toDouble() {
@@ -129,6 +141,7 @@ public class Fraction {
      * @return return the value of gcf between the two values
      */
     private int gcf(int num1, int num2) {
+        if(num1 == 0)   return 1;
         if (num1 == num2) return num1;
         if (num1 > num2) return gcf(num1 - num2, num2);
         return gcf(num2 - num1, num1);

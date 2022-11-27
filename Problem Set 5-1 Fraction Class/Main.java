@@ -1,18 +1,19 @@
 public class Main {
     public static void main(String[] args) {
 
-        Fraction test0 = new Fraction(); //1/1
-        Fraction test1 = new Fraction(99,11); //9/1
-        Fraction test2 = new Fraction("53/13");
-        Fraction test3 = new Fraction(1,12);
+        Fraction test0 = new Fraction(1,1); //1/1
+        Fraction test1 = new Fraction(-99,11); //-9/1
+        Fraction test2 = new Fraction("5/3"); //5/3
+        System.out.println(test2.toDouble());
+        Fraction test3 = new Fraction(-1,12); //-1/12
 
         test0.add(test1);
         System.out.println("added test0 and test1: " + test0);
-        test2.subtract(test1); //-64/13
+        test2.subtract(test1);
         System.out.println("subtracted test1 from test2: "+test2);
-        test3.multiply(test2); //-16/39
+        test3.multiply(test2);
         System.out.println("test3 multiplied new value of test 2: "+test3);
-        test3.divide(test1); //-16/351
+        test3.divide(test1);
         System.out.println("new test3 divided by test1: "+test3);
 
 //        Fraction f = new Fraction(252,105);
